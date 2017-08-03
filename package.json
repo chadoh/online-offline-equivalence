@@ -1,0 +1,9 @@
+{
+  "name": "online-offline-equivalence-slides",
+  "version": "1.0.0",
+  "description": "Slides for the talk Online Offline Equivalence: What our interplanetary tomorrow can teach us about building apps today",
+  "main": "index.js",
+  "repository": "https://github.com/chadoh/online-offline-equivalence",
+  "author": "Chad Ostrowski <hi@chadoh.com>",
+  "license": "MIT"
+}
