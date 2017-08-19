@@ -31,6 +31,12 @@
         font-size: 0.3em;
         display: none;
       }
+      .cramped {
+        letter-spacing: -0.13em;
+      }
+      .small {
+        font-size: calc(.85em + 2.2vw);
+      }
       @media screen {
         body, body.remark-container {
           background: black;
@@ -439,19 +445,34 @@ background-image: url(img/hoodie-js-framework-for-offline-first-apps.jpg)
 
 ---
 
-![the client-server architecture](https://d17oy1vhnax1f7.cloudfront.net/items/3l3g1P2Y0B2g0w0j0u3k/clientServer.gif?v=d39711bb)
+background-color: white
+background-image: url(img/client-server-model.svg)
+
+???
+
+Everything we've talked about so far has been constrained by the _client-server model architecture_. Devices can't talk directly to each other, they require the internet to mediate their conversation.
 
 ---
 
-[![Our apps are addicted to the backbone. Developing world. Offline. Natural disasters. Intermittent connections. All trivial compared to interplanetary networking. The networks we're using are so 20th Century.](https://draftin.com:443/images/47839?token=yoX49JyZyyYq1ts0VXD9aPxJNY5_SWCjigL_CNjEjUPPjTU8tV2EhEL1xc4qGPK9Abhx-6GeKTzAt8d66IvzTPo)](https://ipfs.io/)
+background-image: url(img/addicted-to-the-backbone.jpg)
+
+???
+
+Our apps are addicted to the backbone. Developing world. Offline. Natural disasters. Intermittent connections. All trivial compared to interplanetary networking. The networks we're using are so 20th Century. Image from: https://ipfs.io/
 
 ---
 
-[![three types of networks: centralized, decentralized, and distributed](https://d3ansictanv2wj.cloudfront.net/paul_baran_1962_distributed-80dc7f722a344d6d84556e990ff16018.jpg)](https://www.oreilly.com/ideas/understanding-the-blockchain)
+background-image: url(img/types-of-networks.jpg)
+
+???
+
+Three types of networks: centralized, decentralized, and distributed. Source: On Distributed Communications Networks, Paul Baran, 1962. More info: https://www.oreilly.com/ideas/understanding-the-blockchain
 
 ---
 
-*The Distributed Web:* where two or more devices are gathered, there the Internet is
+*The Distributed Web*:
+
+## where two or more devices are gathered, there the Internet is also
 
 ---
 
@@ -463,69 +484,95 @@ Distributed web history:
 
 ---
 
-[![BitTorrent created in 2001 and is still alive despite concerted, international, billion dollar efforts to destroy it; the BitTorrent community remains impossible to stop because it is both globally decentralized and continues to deliver value](https://draftin.com:443/images/47840?token=-coMiNfmqGlvvwwrPm-YtNMUZhfNFJ3G34P6D9y6VUKddgcHAJbcjcnzBfC2tVhumlDx_oI8ooUszk4W3_7_4dg)](http://www.svds.com/ethereum-the-rise-of-the-world-computer/)
+background-image: url(img/unstoppable-machine.jpg)
+
+???
+
+BitTorrent created in 2001 and is still alive despite concerted, international, billion dollar efforts to destroy it; the BitTorrent community remains impossible to stop because it is both globally decentralized and continues to deliver value. Learn more: http://www.svds.com/ethereum-the-rise-of-the-world-computer/
 
 ---
 
-![picture of protesters during the Arab Spring](https://draftin.com:443/images/47826?token=XDqirzU4XWrtv2EN9AAVyirn86r4ItICnwnV9L3ncrGGPT2uMxEhVIl099X55YcUfeFgVhuwYxv8XvjrHJbjNgc)
+background-image: url(img/protesters.jpg)
+background-size: cover
+
+???
+
+That sounds like a great thing for our protesters organizing for democracy.
 
 ---
 
-![git is completely distributed](http://bishoy.com.au/wp-content/uploads/2015/11/git-tutorial-basics-clone-repotorepocollaboration.png)
+background-image: url(img/git-data-structure.png)
+background-color: white
+
+???
+
+git uses a completely distributed data model
 
 ---
 
-[![how the blockchain allows trustless interactions between peers in a pseudonymous network](https://blogs.thomsonreuters.com/answerson/wp-content/uploads/sites/3/2016/01/infographic-how-blockchain-works.jpg)](https://blogs.thomsonreuters.com/answerson/blockchain-technology/)
+background-image: url(img/infographic-how-blockchain-works.jpg)
+
+???
+
+how the blockchain allows trustless interactions between peers in a pseudonymous network. Read more: https://blogs.thomsonreuters.com/answerson/blockchain-technology/
 
 ---
 
-let's review where we're at
+# let's review where we're at
 
 ---
 
-[![IPFS is the distributed web](https://draftin.com:443/images/47841?token=S7ylZ6nN7dX-8z_b40cu1Gbrp1axJtC4wFWe9TsxxrW923PaVlQf8W0iErU21iiRcy-ivt8ba99-dzQlrtKROps)](https://ipfs.io/)
+background-image: url(img/ipfs-is-the-distributed-web.jpg)
+
+???
+
+More info: https://ipfs.io
 
 ---
 
-## "similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects"
+"similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects"
 
 [github.com/ipfs/ipfs](https://github.com/ipfs/ipfs)
 
 ---
 
-wut
+# wut
 
 ---
 
-## "IPFS is a distributed file system that seeks to connect all computing devices with the same system of files."
+"IPFS is a distributed file system that seeks to connect all computing devices with the same system of files."
 
 [github.com/ipfs/ipfs](https://github.com/ipfs/ipfs)
 
 ---
 
-## "IPFS is becoming a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy."
+"IPFS is becoming a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy."
 
 [github.com/ipfs/ipfs](https://github.com/ipfs/ipfs)
 
 ---
 
-*Content Addressable*
+# *Content Addressable*
 
 ---
 
-https://*twitter.com*/Alshaheeed/status/86025799844642816
+class: cramped
 
-<!--
+h t t p s : / / * t w i t t e r . c o m * / A l s h a h e e e d / s t a t u s / 8 6 0 2 5 7 9 9 8 4 4 6 4 2 8 1 6
+
+???
+
 If all you want is the content of the tweet, you don't really care that it lives on Twitter's servers. Imagine wanting to read a book and needing to go to one specific library, across the country/world, to get it.
--->
 
 ---
 
-/ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG
+class: cramped
 
-<!--
+/ i p f s / * Q m Y w A P J z v 5 C Z s n A 6 2 5 s 3 X f 2 n e m t Y g P p H d W E z 7 9 o j W n P b d G *
+
+???
+
 IPFS, on the other hand, addresses content by a hash unique to that content. You can get it from anyone on the network. You can store it so people near you can quickly retrieve it from your computer.
--->
 
 ---
 
@@ -537,35 +584,45 @@ web
 
 ---
 
-hooray for *distributed files*
+## hooray for *distributed files*
 
 ---
 
-what about *distributed data*?
+## what about *distributed data*?
 
 ---
 
-[![bigchaindb - a database built on the blockchain](https://draftin.com:443/images/47842?token=N6y0f83SAYvcn5a8n4KbC0rXTzyEcclGNtfzFhhuyDssWkRymCRrIb1sTaG07DNnPKfWlY7Ce_pg4wU68VYrz6M)](https://www.bigchaindb.com/)
+background-image: url(img/bigchaindb.jpg)
 
-<!--
+???
+
 People are working on this, too! It turns out the blockchain is great for storing data.
--->
+
+bigchaindb - a database built on the blockchain. Learn more: https://www.bigchaindb.com/
 
 ---
 
-hooray for *distributed files and data*, what about... *server-side logic*?
+## hooray for *distributed files and data*, what about... *server-side logic*?
 
 ---
 
-hooray for *distributed files and data*, what about ~~server-side~~*incorruptible* logic?
+## hooray for *distributed files and data*, what about ~~server-side~~ *incorruptible* logic?
 
 ---
 
-![ethereum allows creating smart contracts that get run and validated by all machines participating in the blockchain.jpg](https://draftin.com:443/images/47846?token=8XIkJHNf9sElcpMncu2iygqk4_cbd0a963bDWqDrnj88OHvqoGbdseZ3kKmkLKgQwdYDHvG9Oxg02SWxjrCRq6o)
+background-image: url(img/ethereum.jpg)
+
+???
+
+ethereum allows creating smart contracts that get run and validated by all machines participating in the blockchain
 
 ---
 
-![build a democratic autonomous organization.jpg](https://draftin.com:443/images/47847?token=aI5uv3jbCjoCFHwhFpQwkkX-71qy07_WTdL3yvnyJKwcJUo-VHj-QDp1I5HW_-9LFyjGKNVOK0PUG8fy1QSBXY4)
+background-image: url(img/democratic-autonomous-organization.jpg)
+
+???
+
+build a democratic autonomous organization.jpg
 
 ---
 
@@ -573,8 +630,11 @@ Resources
 
 ---
 
-[![Stanford Seminar - IPFS and the Permanent Web](https://draftin.com:443/images/47848?token=TU3Ye_Ehx51NnYjS22a15HV9W6qYX-m7QWcO79O0CWF_8kxxTabzJATmc8hCFAlcuF-1P9rPMCzVGO9k7hRESPo)
-](https://www.youtube.com/watch?v=HUVmypx9HGI)
+background-image: url(img/juan-benet-stanford-seminar.jpg)
+
+???
+
+Stanford Seminar - IPFS and the Permanent Web: https://www.youtube.com/watch?v=HUVmypx9HGI
 
 ---
 
@@ -583,6 +643,8 @@ Resources
 * https://ethereum.org/
 
 ---
+
+class: small
 
 Summary
 
