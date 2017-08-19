@@ -7,7 +7,8 @@
   "author": "Chad Ostrowski <hi@chadoh.com>",
   "license": "MIT",
   "scripts": {
-    "start": "http-server -c-1 -p 1234 public"
+    "start": "http-server -c-1 -p 1234 public",
+    "deploy": "mkdir -p ~/Partyshare/online-offline-equivalence && cp -R public/* ~/Partyshare/online-offline-equivalence"
   },
   "dependencies": {},
   "devDependencies": {
