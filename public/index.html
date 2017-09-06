@@ -40,6 +40,9 @@
       .small {
         font-size: calc(.85em + 2.2vw);
       }
+      .remark-code {
+        font-size: inherit;
+      }
       @media screen {
         body, body.remark-container {
           background: black;
@@ -611,11 +614,135 @@ class: center, middle
 
 ---
 
+# What are *Service Workers*?
+
+---
+
+## periodic background syncs &lt;br&gt; *rich offline experiences* &lt;br&gt; push notifications
+
+???
+
+From [Service Workers: An Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
+
+> Rich offline experiences, periodic background syncs, push notifications—functionality that would normally require a native application—are coming to the web. Service workers provide the technical foundation that all these features rely on.
+
+---
+
+background-image: url(img/sw-fetch.png)
+
+???
+
+Service Workers run in the background, intercept calls that the page makes, and can respond with cached content. Image [from Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+
+---
+
+# [Can I use it yet?](https://jakearchibald.github.io/isserviceworkerready/)
+
+---
+
+background-image: url(img/is-service-worker-ready.png)
+
+---
+
 background-image: url(img/roundtrips/blank.png)
 
 ---
 
 background-image: url(img/roundtrips/http1-step1.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step2.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step3.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step4.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step5.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step6.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step7.png)
+
+---
+
+class: middle, center
+
+# 😎
+
+---
+
+class: middle, center
+
+# 😟
+
+---
+
+background-image: url(img/roundtrips/sw-step6.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step8.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-size: auto
+background-image: url(img/entire.life-form.png)
+
+---
+
+```
+POST /events
+{
+  title: "Landed on Mars",
+  emoji: ":rocket:",
+  date: "2033-09-16"
+}
+
+```
+
+---
+
+background-size: auto
+background-image: url(img/entire.life-event.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepA.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepB.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepC.png)
+
+---
+
+class: middle, center
+
+# 😞
+
+---
+
+*improvement 3*
+
+# Local Storage
 
 ---
 ---
@@ -661,7 +788,7 @@ background-image: url(img/average-page-size-doom.jpg)
 
 ---
 
-background-image: url(img/is-service-worker-ready.jpg)
+background-image: url(img/is-service-worker-ready.png)
 
 ???
 
