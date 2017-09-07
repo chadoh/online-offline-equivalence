@@ -164,7 +164,7 @@ Comic from [Poorly Drawn Lines](http://poorlydrawnlines.com/comic/spaceship-eart
 
 ## *Where we're going*
 
-1. A future problem
+1. Problems of future's present
 2. Solutions
   1. Offline First
   2. Distributed Web
@@ -745,55 +745,37 @@ class: middle, center
 # Local Storage
 
 ---
----
 
-# OFFLINE
-# FIRST
+*the idea*
 
-???
-
-From [Bradley Holt](https://medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694):
-
-> With an Offline First approach you design your app for the most resource-constrained environments first, and then apply progressive enhancement techniques to make your app work better and better as it has access to more and more resources.
->
-> Using an Offline First approach means that your app will not only work offline, but your app will work better when it has access to only a flaky network connection, and your app will even work better when it has a great network connection. Without this intent to design your app for the progression from offline to limited connectivity to great connectivity, there would be no reason to call it Offline First.
+## store data locally
 
 ---
 
-background-image: url(img/a-list-apart-offline-first.jpg)
+*the idea*
 
-???
-
-What it doesn't mean: building your apps assuming that there will be constant fast connectivity, then adding in some graceful handling of inevitable network issues. That's the *graceful degradation* approach. It's analogous to designing for desktop, then trying to add support for mobile after you get complaints.
-
-What Offline First champions is more like Mobile First. Don't treat lack of connectivity as an error state. This is the *progressive enhancement* approach. Assume that your users will be mostly, or at least frequently, offline. Then progressively enhance your app to take advantage of network connectivity when it's available.
+## store data locally &lt;br&gt; sync it back to the server periodically
 
 ---
 
-background-image: url(img/instagram-error.png)
+two underlying technologies
 
-???
-
-Old Instagram provides a good example of graceful degradation, and a good counter-example to offline first design.
-
-Instagram has started making strides toward being fully offline first, and already is for Android. [Source](https://medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694).
-
----
-
-Service Workers
-
-≈
-
-# Progressive Web Apps
-
----
-
-* [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-* [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+* ## [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+* ## [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
 ???
 
 Browser-based technologies that store data locally, to be synced back to server (maybe) when connection is available
+
+---
+
+# Can I use it yet?
+
+[yes](http://caniuse.com/#search=localstorage) and [yes](http://caniuse.com/#search=indexeddb)
+
+---
+
+# lots of tools to make it easier
 
 ---
 
@@ -805,17 +787,49 @@ background-image: url(img/localForage.jpg)
 
 ---
 
-background-image: url(img/PouchDB.jpg)
+background-image: url(img/PouchDB.png)
 
 ???
 
 [PouchDB](https://pouchdb.com/) allows you to read and write data directly on the device, and then sync this data to the cloud when you have an internet connection.
 
-TODO: add alternatives to PouchDB
+---
+
+background-image: url(img/rxdb.png)
+
+???
+
+[RxDB](https://pubkey.github.io/rxdb/)
 
 ---
 
-background-image: url(img/hoodie-js-framework-for-offline-first-apps.jpg)
+background-image: url(img/swarm.png)
+
+???
+
+[Swarm](http://swarmjs.github.io/)
+
+---
+
+background-size: auto
+background-image: url(img/synceddb.png)
+
+???
+
+[SyncedDB](https://github.com/paldepind/synceddb)
+
+---
+
+background-size: auto
+background-image: url(img/shareddb.png)
+
+???
+
+[SharedDB](https://github.com/share/sharedb)
+
+---
+
+background-image: url(img/hoodie-js-framework-for-offline-first-apps.png)
 
 ???
 
@@ -825,6 +839,57 @@ background-image: url(img/hoodie-js-framework-for-offline-first-apps.jpg)
 
 Hoodie and other orgs doing seminal thinking about new UX conundrums in an Offline First paradigm.
 
+---
+
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step2.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step3.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step4.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step5.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step6.png)
+
+---
+
+class: middle, center
+
+# 😎
+
+---
+
+*Service Workers* + *Local Storage* ≈
+
+# Progressive Web Apps
+
+---
+
+*Service Workers* + *Local Storage* ≈
+
+# Offline First
+
+???
+
+From [Bradley Holt](https://medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694):
+
+> With an Offline First approach you design your app for the most resource-constrained environments first, and then apply progressive enhancement techniques to make your app work better and better as it has access to more and more resources.
+>
+> Using an Offline First approach means that your app will not only work offline, but your app will work better when it has access to only a flaky network connection, and your app will even work better when it has a great network connection. Without this intent to design your app for the progression from offline to limited connectivity to great connectivity, there would be no reason to call it Offline First.
+
+---
 ---
 
 ## hooray for *one person's local data*, what about *collaboration*?
