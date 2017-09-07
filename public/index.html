@@ -40,6 +40,9 @@
       .small {
         font-size: calc(.85em + 2.2vw);
       }
+      .remark-code {
+        font-size: inherit;
+      }
       @media screen {
         body, body.remark-container {
           background: black;
@@ -161,7 +164,7 @@ Comic from [Poorly Drawn Lines](http://poorlydrawnlines.com/comic/spaceship-eart
 
 ## *Where we're going*
 
-1. A future problem
+1. Problems of future's present
 2. Solutions
   1. Offline First
   2. Distributed Web
@@ -481,52 +484,147 @@ The second approach--and the bigger change--is the Distributed Web. This is curr
 
 ---
 
-# OFFLINE
-# FIRST
-
-???
-
-From [Bradley Holt](https://medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694):
-
-> With an Offline First approach you design your app for the most resource-constrained environments first, and then apply progressive enhancement techniques to make your app work better and better as it has access to more and more resources.
->
-> Using an Offline First approach means that your app will not only work offline, but your app will work better when it has access to only a flaky network connection, and your app will even work better when it has a great network connection. Without this intent to design your app for the progression from offline to limited connectivity to great connectivity, there would be no reason to call it Offline First.
+one step at a time
 
 ---
 
-background-image: url(img/a-list-apart-offline-first.jpg)
-
-???
-
-What it doesn't mean: building your apps assuming that there will be constant fast connectivity, then adding in some graceful handling of inevitable network issues. That's the *graceful degradation* approach. It's analogous to designing for desktop, then trying to add support for mobile after you get complaints.
-
-What Offline First champions is more like Mobile First. Don't treat lack of connectivity as an error state. This is the *progressive enhancement* approach. Assume that your users will be mostly, or at least frequently, offline. Then progressively enhance your app to take advantage of network connectivity when it's available.
+background-image: url(img/roundtrips/blank.png)
 
 ---
 
-background-image: url(img/instagram-error.png)
-
-???
-
-Old Instagram provides a good example of graceful degradation, and a good counter-example to offline first design.
-
-Instagram has started making strides toward being fully offline first, and already is for Android. [Source](https://medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694).
+background-image: url(img/roundtrips/12lm.png)
 
 ---
 
-background-image: url(img/average-page-size-doom.jpg)
-
-???
-
-[The average webpage size now same as original doom](https://www.wired.com/2016/04/average-webpage-now-size-original-doom/)
+background-image: url(img/roundtrips/blank.png)
 
 ---
 
-background-image: url(img/is-service-worker-ready.jpg)
+background-image: url(img/roundtrips/http1-step1.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step2.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step3.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step4.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step5.png)
+
+---
+
+class: center, middle
+
+# 😞
+
+---
+
+*improvement 1*
+
+# HTTP/2
 
 ???
 
-Part of the solution: [Service Workers](https://jakearchibald.github.io/isserviceworkerready/)
+[Much info](https://http2.github.io/faq/#why-revise-http)!
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step1.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step2.png)
+
+???
+
+This feature of HTTP/2 is called Server Push
+
+---
+
+background-image: url(img/roundtrips/http2-step3.png)
+
+---
+
+class: center, middle
+
+# 🎉
+
+---
+
+class: center, middle
+
+# 😕
+
+---
+
+class: center, middle
+
+# ☹️
+
+???
+
+It gets worse!
+
+---
+
+background-image: url(img/roundtrips/http2-step4.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step5.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step6.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step7.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step8.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step9.png)
+
+---
+
+class: center, middle
+
+# 😞
+
+---
+
+*improvement 2*
+
+# Service Workers
+
+---
+
+# What are *Service Workers*?
+
+---
+
+## periodic background syncs &lt;br&gt; *rich offline experiences* &lt;br&gt; push notifications
+
+???
+
+From [Service Workers: An Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
+
+> Rich offline experiences, periodic background syncs, push notifications—functionality that would normally require a native application—are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 ---
 
@@ -538,20 +636,132 @@ Service Workers run in the background, intercept calls that the page makes, and 
 
 ---
 
-Service Workers
-
-≈
-
-# Progressive Web Apps
+# [Can I use it yet?](https://jakearchibald.github.io/isserviceworkerready/)
 
 ---
 
-# hooray for *assets*, what about *data*?
+background-image: url(img/is-service-worker-ready.png)
 
 ---
 
-* [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-* [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step1.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step2.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step3.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step4.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step5.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step6.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step7.png)
+
+---
+
+class: middle, center
+
+# 😎
+
+---
+
+class: middle, center
+
+# 😟
+
+---
+
+background-image: url(img/roundtrips/sw-step6.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step8.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-size: auto
+background-image: url(img/entire.life-form.png)
+
+---
+
+```
+POST /events
+{
+  title: "Landed on Mars",
+  emoji: ":rocket:",
+  date: "2033-09-16"
+}
+
+```
+
+---
+
+background-size: auto
+background-image: url(img/entire.life-event.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepA.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepB.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepC.png)
+
+---
+
+class: middle, center
+
+# 😞
+
+---
+
+*improvement 3*
+
+# Local Storage
+
+---
+
+*the idea*
+
+## store data locally
+
+---
+
+*the idea*
+
+## store data locally &lt;br&gt; sync it back to the server periodically
+
+---
+
+two underlying technologies
+
+* ## [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+* ## [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
 ???
 
@@ -559,13 +769,13 @@ Browser-based technologies that store data locally, to be synced back to server 
 
 ---
 
-background-image: url(img/wunderlist-screenshot.jpg)
+# Can I use it yet?
 
-???
+[yes](http://caniuse.com/#search=localstorage) and [yes](http://caniuse.com/#search=indexeddb)
 
-Example of what these sorts of technologies can give us
+---
 
-* Also mention Instagram
+# lots of tools to make it easier
 
 ---
 
@@ -577,17 +787,49 @@ background-image: url(img/localForage.jpg)
 
 ---
 
-background-image: url(img/PouchDB.jpg)
+background-image: url(img/PouchDB.png)
 
 ???
 
 [PouchDB](https://pouchdb.com/) allows you to read and write data directly on the device, and then sync this data to the cloud when you have an internet connection.
 
-TODO: add alternatives to PouchDB
+---
+
+background-image: url(img/rxdb.png)
+
+???
+
+[RxDB](https://pubkey.github.io/rxdb/)
 
 ---
 
-background-image: url(img/hoodie-js-framework-for-offline-first-apps.jpg)
+background-image: url(img/swarm.png)
+
+???
+
+[Swarm](http://swarmjs.github.io/)
+
+---
+
+background-size: auto
+background-image: url(img/synceddb.png)
+
+???
+
+[SyncedDB](https://github.com/paldepind/synceddb)
+
+---
+
+background-size: auto
+background-image: url(img/shareddb.png)
+
+???
+
+[SharedDB](https://github.com/share/sharedb)
+
+---
+
+background-image: url(img/hoodie-js-framework-for-offline-first-apps.png)
 
 ???
 
@@ -599,7 +841,113 @@ Hoodie and other orgs doing seminal thinking about new UX conundrums in an Offli
 
 ---
 
-## hooray for *one person's local data*, what about *collaboration*?
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step2.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step3.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step4.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step5.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step6.png)
+
+---
+
+class: middle, center
+
+# 😅
+
+---
+
+*Service Workers* + *Local Storage* ≈
+
+# Progressive Web Apps
+
+---
+
+*Service Workers* + *Local Storage* ≈
+
+# Offline First
+
+???
+
+From [Bradley Holt](https://medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694):
+
+> With an Offline First approach you design your app for the most resource-constrained environments first, and then apply progressive enhancement techniques to make your app work better and better as it has access to more and more resources.
+>
+> Using an Offline First approach means that your app will not only work offline, but your app will work better when it has access to only a flaky network connection, and your app will even work better when it has a great network connection. Without this intent to design your app for the progression from offline to limited connectivity to great connectivity, there would be no reason to call it Offline First.
+
+---
+
+class: middle, center
+
+# 😅
+
+---
+
+class: middle, center
+
+# 😓
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/earth-centric.png)
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step7.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step8.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step9.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepA.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepB.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepC.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepD.png)
+
+---
+
+# we need a better architecture
 
 ---
 
@@ -612,14 +960,6 @@ Everything we've talked about so far has been constrained by the _client-server 
 
 ---
 
-background-image: url(img/addicted-to-the-backbone.jpg)
-
-???
-
-Our apps are addicted to the backbone. Developing world. Offline. Natural disasters. Intermittent connections. All trivial compared to interplanetary networking. The networks we're using are so 20th Century. Image from: https://ipfs.io/
-
----
-
 background-image: url(img/types-of-networks.jpg)
 
 ???
@@ -628,29 +968,47 @@ Three types of networks: centralized, decentralized, and distributed. Source: On
 
 ---
 
-*The Distributed Web*:
+background-image: url(img/types-of-networks-yay-distributed.jpg)
+
+---
+
+*The Distributed Web*
 
 ## where two or more devices are gathered, there the Internet is also
 
 ---
 
-Distributed web key building blocks:
-
-* 2001: BitTorrent
-* 2005: Git
-* 2009: Distributed Consensus
+background-image: url(img/roundtrips/ls-stepD.png)
 
 ---
 
-background-image: url(img/unstoppable-machine.jpg)
+background-image: url(img/roundtrips/dist-1.png)
+
+---
+
+class: middle, center
+
+# how?
+
+---
+
+class: middle, center
+
+# BitTorrent?
+
+---
+
+background-image: url(img/bittorrent-6.gif)
 
 ???
 
-BitTorrent created in 2001 and is still alive despite concerted, international, billion dollar efforts to destroy it; the BitTorrent community remains impossible to stop because it is both globally decentralized and continues to deliver value. Learn more: http://www.svds.com/ethereum-the-rise-of-the-world-computer/
+From [How Stuff Works](http://computer.howstuffworks.com/bittorrent2.htm)
 
 ---
 
-background-image: url(img/bittorrent-network-flow2.gif)
+class: middle, center
+
+# git?
 
 ---
 
@@ -671,15 +1029,44 @@ The git object model: a Merkle DAG (Directed Acyclic Graph)
 
 ---
 
-background-image: url(img/distributed-consensus.gif)
+background-size: auto
+background-image: url(img/ralph-merkle.jpg)
 
 ???
 
-The blockchain allows trustless interactions between peers in a pseudonymous network. Learn more: https://www.youtube.com/watch?v=bBC-nXj3Ng4
+This data structure was created by [Ralph Merkle](https://en.wikipedia.org/wiki/Ralph_Merkle)
 
 ---
 
-# let's review where we're at
+background-image: url(img/git-object-model-merkle-tree.png)
+
+---
+
+background-image: url(img/git-object-model-merkle-directed.png)
+
+---
+
+background-image: url(img/git-object-model-merkle-dag.png)
+
+---
+
+class: middle, center
+
+# 1:1
+# file:hash
+
+
+---
+
+class: middle, center
+
+*3fa0d4b98* ↔ *"Hello, World"*
+
+---
+
+So,
+
+# can we use git &amp; BitTorrent together?
 
 ---
 
@@ -697,7 +1084,15 @@ More info: https://ipfs.io
 
 ---
 
-# wut
+class: middle, center
+
+# 🎉
+
+---
+
+*improvement 4*
+
+# IPFS
 
 ---
 
@@ -710,6 +1105,10 @@ More info: https://ipfs.io
 "IPFS is becoming a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy."
 
 [github.com/ipfs/ipfs](https://github.com/ipfs/ipfs)
+
+---
+
+# how does it work?
 
 ---
 
@@ -737,27 +1136,95 @@ IPFS, on the other hand, addresses content by a hash unique to that content. You
 
 ---
 
-The
-
-(*distributed*|*permanent*)
-
-web
+background-image: url(img/roundtrips/dist-1.png)
 
 ---
 
-## hooray for *distributed files*
+background-image: url(img/roundtrips/dist-2.png)
 
 ---
 
-## what about *distributed data*?
+class: middle, center
+
+# 😁
+
+---
+
+class: middle, center
+
+# 😒
+
+---
+
+background-image: url(img/roundtrips/dist-2.png)
+
+---
+
+background-image: url(img/roundtrips/dist-3.png)
+
+---
+
+background-image: url(img/roundtrips/dist-4.png)
+
+---
+
+background-image: url(img/roundtrips/dist-5.png)
+
+---
+
+background-image: url(img/roundtrips/dist-6.png)
+
+---
+
+background-image: url(img/roundtrips/dist-3.png)
+
+---
+
+background-image: url(img/roundtrips/dist-7.png)
+
+---
+
+background-image: url(img/roundtrips/dist-8.png)
+
+---
+
+background-image: url(img/roundtrips/dist-9.png)
+
+---
+
+background-image: url(img/roundtrips/dist-A.png)
+
+---
+
+background-image: url(img/roundtrips/dist-B.png)
+
+---
+
+background-image: url(img/roundtrips/dist-C.png)
+
+---
+
+# Can we do this?
+
+---
+
+# Can we do this?
+
+*Yes*
+
+---
+
+*improvement 5*
+
+# IPFS PubSub
 
 ---
 
 background-image: url(img/ipfs-pubsub-crdts.png)
 
-???
+---
 
-Can do this with IPFS, too!
+# one more puzzle piece
 
 ---
 
@@ -769,6 +1236,76 @@ Can do this with IPFS, too!
 
 ---
 
+background-image: url(img/roundtrips/dist-2.png)
+
+---
+
+background-image: url(img/roundtrips/dist-D.png)
+
+---
+
+background-image: url(img/roundtrips/dist-E.png)
+
+---
+
+background-image: url(img/roundtrips/dist-F.png)
+
+---
+
+background-image: url(img/roundtrips/dist-G.png)
+
+---
+
+background-image: url(img/distributed-consensus.gif)
+
+???
+
+The blockchain allows trustless interactions between peers in a pseudonymous network. Learn more: https://www.youtube.com/watch?v=bBC-nXj3Ng4
+
+---
+
+*we need*
+
+# distributed consensus
+
+---
+
+class: middle, center
+
+# aka
+
+---
+
+class: middle, center
+
+# blockchain
+
+---
+
+class: middle, center
+
+# aka
+
+---
+
+class: middle, center
+
+# bitcoin
+
+---
+
+class: middle, center
+
+# or
+
+---
+
+class: middle, center
+
+# *ethereum*
+
+---
+
 background-image: url(img/ethereum.jpg)
 
 ???
@@ -777,11 +1314,93 @@ ethereum allows creating smart contracts that get run and validated by all machi
 
 ---
 
+*improvement 6*
+
+# Ethereum
+
+---
+
+# we did it!
+
+---
+
+# we have a fully-functional app!
+
+---
+
+# for any network edge!
+
+---
+
+# we fixed Martian internet!
+
+---
+
+# we fixed latency!
+
+---
+
+# we fixed censorship!
+
+---
+
+# we can put data close to where it's needed!
+
+---
+
+class: middle, center
+
+# 😊
+
+---
+
+class: middle, center
+
+# 😲
+
+---
+
 background-image: url(img/democratic-autonomous-organization.jpg)
 
 ???
 
 build a democratic autonomous organization.jpg
+
+---
+
+background-image: url(img/democratic-autonomous-organization-highlights.jpg)
+
+---
+
+*YOU CAN BUILD:*
+
+* A virtual organization where members vote on issues
+* A transparent association based on shareholder voting
+* Your own country with an unchangeable constitution
+* A better delegative democracy
+
+---
+
+class: middle, center
+
+# 😵
+
+---
+
+# *wrapping up*
+
+---
+
+## *where we've been*
+
+1. Problems of future's present &ndash; *solved*
+2. Solutions
+  1. Offline First &ndash; *use it now!*
+  2. Distributed Web &ndash; *help shape its future!*
+
+???
+
+Advice from [@inkel](http://twitter.com/inkel): Don't engage with people that ask a "question" that is in fact a comment or a _I might know better about the subject you're talking about and this is why_. Instead tell them it's a great question and that you can discuss the subject on the hallway track. After all, it's your presentation, not theirs 😉
 
 ---
 
@@ -801,22 +1420,6 @@ Stanford Seminar - IPFS and the Permanent Web: https://www.youtube.com/watch?v=H
 * https://ipfs.io/
 * https://ethereum.org/
 * https://github.com/chadoh/online-offline-equivalence/
-
----
-
-class: small
-
-Summary
-
-* hours-long latencies are the new normal, *design for them*
-* *offline first* already makes this possible for single-user workflows
-* the *distributed web* is emerging now, and brings fully communicative apps to any edge of the network
-
-Questions?
-
-???
-
-Advice from [@inkel](http://twitter.com/inkel): Don't engage with people that ask a "question" that is in fact a comment or a _I might know better about the subject you're talking about and this is why_. Instead tell them it's a great question and that you can discuss the subject on the hallway track. After all, it's your presentation, not theirs 😉
 
     </textarea>
     <script src="remark-latest.min.js">
