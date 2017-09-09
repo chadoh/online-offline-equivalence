@@ -8,10 +8,11 @@
   "license": "MIT",
   "scripts": {
     "start": "http-server -c-1 -p 1234 public",
-    "deploy": "mkdir -p ~/Partyshare/online-offline-equivalence && cp -R public/* ~/Partyshare/online-offline-equivalence"
+    "deploy": "node bin/deploy.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "gh-pages": "^1.0.0",
     "http-server": "^0.10.0"
   }
 }

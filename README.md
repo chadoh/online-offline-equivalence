@@ -9,10 +9,3 @@ These slides are built using [remarkjs](https://github.com/gnab/remark), which a
 This particular project uses yarn and whatnot to give some niceties in the development environment that probably aren't necessary. The only thing you actually need are the files in the `public` folder--you could just open `index.html` in a browser, and BAM! Slides!
 
 I'm pretty proud of the styles I used for the slides. It took me a while to figure out how to override RemarkJS's styles in that way. If you enjoy it, feel free to copy it.
-
-## Deploy
-
-* Install [Partyshare](https://partysha.re/)
-* Run `yarn deploy`
-
-The slides are now hosted on the IPFS network. You can get the URL for the index.html page from your Partyshare dialog.
