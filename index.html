@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online/Offline Equivalence: What our interplanetary tomorrow can teach us about building apps today</title>
+    <meta charset="utf-8">
+    <style>
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      a {
+        color: #66AEE2;
+      }
+      .remark-slide-content {
+        background-size: contain;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: calc(.85em + 3vw);
+        padding: 1rem 4rem;
+      }
+      .remark-slide-content h1 {
+        font-size: 2em;
+      }
+      .remark-slide-content h2 {
+        font-size: 1.5em;
+      }
+      .remark-slide-content em {
+        font-style: normal;
+        color: #8dbd0c;
+      }
+      .remark-slide-content > *:first-child {
+        margin-top: 0;
+      }
+      .remark-slide-number {
+        font-size: 0.3em;
+        display: none;
+      }
+      .cramped {
+        letter-spacing: -0.13em;
+      }
+      .small {
+        font-size: calc(.85em + 2.2vw);
+      }
+      .remark-code {
+        font-size: inherit;
+      }
+      @media screen {
+        body, body.remark-container {
+          background: black;
+          color: white;
+        }
+        .remark-slide-content {
+          background-color: black;
+        }
+        .remark-slide-scaler {
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source" style="display:none">
+
+class: middle
+
+# *Online/Offline Equivalence*
+
+What our interplanetary tomorrow can teach us about building apps today
+
+---
+
+background-image: url(img/instantaneous-communication.png)
+
+???
+
+Prologue: We live in a special time! Whole-species instantaneous communication is a short-lived phenomenon for a technological civilization of sufficient longevity.
+
+---
+
+# me
+
+---
+
+# Chad Ostrowski
+
+---
+
+background-image: url(img/YouAreHereInTheGalaxy.jpg)
+
+???
+
+I live in the Orion arm of the Milky Way galaxy
+
+---
+
+background-image: url(img/earth_pacific_lrg.jpg)
+background-size: cover
+
+???
+
+more specifically, I live on a water planet called Earth
+
+---
+
+background-image: url(img/eastern-seaboard.jpg)
+background-size: cover
+
+???
+
+I live in a city called Lancaster
+
+---
+
+background-image: url(img/entire.life:chadoh.png)
+
+???
+
+Here's what I've been up to for the past 14 years.
+
+---
+
+background-image: url(img/entire.life:chadoh-made-with.png)
+
+???
+
+You can make your own life chart on Entire.Life, which I built and maintain in my free time
+
+---
+
+background-image: url(img/entire.life:chadoh-made-with-decorated.png)
+
+???
+
+Get one! https://entire.life
+
+---
+background-image: url(img/citrusbyte.png)
+
+???
+
+During the day, I work at citrusbyte: innovate like a startup, even if you aren't one. We're hiring!
+
+---
+
+class: middle
+
+* twitter.com/chadoh
+* github.com/chadoh
+* entire.life/chadoh
+* medium.com/@chadoh
+
+---
+
+background-image: url(img/cosmic-algae.png)
+
+???
+
+Disclaimer: I am cosmic algae. I am not an expert, I am learning with you. Correct me if you notice mistakes!
+
+Comic from [Poorly Drawn Lines](http://poorlydrawnlines.com/comic/spaceship-earth/)
+
+---
+
+## *Where we're going*
+
+1. Problems of future's present
+2. Solutions
+  1. Offline First
+  2. Distributed Web
+
+---
+
+# let's go on a journey
+
+---
+
+# [How far is it to Mars?](http://www.distancetomars.com/)
+
+---
+
+# 56 million km
+
+---
+
+56,000,000 km ÷ 300,000 km/s =
+
+# *3 light minutes*
+
+---
+
+# *6 minute latency*
+
+(during the fast part of the year)
+
+---
+
+# at the closest!
+
+---
+
+background-image: url(img/mars-one-announces-100-finalists-vying-to-be-first-people-on-mars-image-2.jpg)
+
+???
+
+Mars One wants to establish a permanent human colony on Mars by 2030
+
+---
+
+background-image: url(img/mars-settler-internet.jpg)
+
+???
+
+Mars One says that, for astronauts on Mars,
+
+> Easy Internet access will be limited to their preferred sites that are constantly updated on the local Mars web server. Other websites will take between 6 and 45 minutes to appear on their screen - first 3-22 minutes for your click to reach Earth, and then another 3-22 minutes for the website data to reach Mars. Contact friends at home is possible by video, voice or text message–e-mail, WhatsApp, sms–but real time dialogue is not possible, because of the time delay.
+
+---
+
+"preferred sites that are constantly updated on the local Mars web server"
+
+---
+
+# does this even qualify as the Internet?
+
+---
+
+background-image: url(img/protesters.jpg)
+background-size: cover
+
+???
+
+protesters during the Arab Spring
+
+---
+
+the internet is
+
+# *a discussion*
+
+---
+
+the internet is
+
+# *many-to-many*
+
+---
+
+the internet is
+
+# *controlled by its participants*
+
+---
+
+the internet is
+
+# *a great democratizer*
+
+---
+
+# and if I *can't contribute*
+
+---
+
+# then it *doesn't count*
+
+---
+
+Let's think through it
+
+---
+
+background-image: url(img/patreon-no-share.png)
+
+???
+
+Here's a simple page of text; the sort Mars One might imagine when it says "preferred sites to be updated on local Mars server"
+
+---
+
+background-image: url(img/patreon.png)
+
+???
+
+Except even this page expects interactivity! Is it acceptable to leave Martians out of this sort of discussion?
+
+---
+
+background-image: url(img/social-media-icons.png)
+
+???
+
+At a next level of interactivity, we have social media sites. These are certainly many-to-many! You are expected to contribute. Instagram would not be very "Insta" on Mars!
+
+---
+
+background-image: url(img/slack.jpg)
+
+???
+
+Finally, all the apps that require real-time collaboration would just be totally broken on Mars
+
+---
+
+*meanwhile, in 2017*
+
+# why should we care?
+
+---
+
+## tomorrow's problems
+## ===
+## today's problems but *bigger*
+
+???
+
+Thesis statement.
+
+So if we start solving tomorrow's problems now, we will fix current problems and improve the current world. I'll phrase a lot of this talk around helping and serving people. If that's not motivating for you, you're welcome to translate "helping people" into "making money" in your head. Every now and then, it might actually be true that you can help people and make money off of them at the same time.
+
+---
+
+*Earth problem 1*
+
+# Latency
+
+---
+
+background-image: url(img/amazon-data-centers.png)
+
+???
+
+Depending on where you've deployed your app and where your customers are, they could experience some significant latencies. Six minutes?
+
+---
+
+background-image: url(img/internet-penetration-over-time.gif)
+
+???
+
+This image shows how the internet grew worldwide from 2000 - 2012. Found on [Vox - 40 Maps That Explain The Internet](https://www.vox.com/a/internet-maps)
+
+Lots of countries are starting to come online, but the infrastructure still isn't reliable. An internet that works even on Mars would make using the internet much more feasible for these people.
+
+---
+
+# [86 million](http://www.internetlivestats.com/internet-users/nigeria/)
+
+???
+
+The number of internet users in Nigeria, with just 46% of population online. That's a large number of people to be helped.
+
+---
+
+background-image: url(img/airplane-mode.png)
+
+???
+
+Then there are all the more prosaic times that we have poor network connectivity.
+
+The network has many edges where disconnection and flaky connections are a regular occurrence.
+
+---
+
+*Earth Problem 2*
+
+# Censorship
+
+---
+
+background-image: url(img/egyptian-internet-shutdown.png)
+
+???
+
+in January 2011, Egypt shut down its whole country's access to the internet
+
+---
+
+background-image: url(img/protesters.jpg)
+background-size: cover
+
+???
+
+That brings us back to these folks. Trying to organize for democracy during the Arab Spring.
+
+---
+
+background-image: url(img/risk-of-disconnection.png)
+
+???
+
+This image shows worldwide risk of countries being disconnected from the internet as of 2014. Found on [Vox - 40 Maps That Explain The Internet](https://www.vox.com/a/internet-maps)
+
+---
+
+background-image: url(img/san-franciscan-internet-shutdown.jpg)
+
+???
+
+in August 2011, San Francisco shut down the internet
+
+---
+
+background-image: url(img/world-censorship.png)
+
+???
+
+Then of course, there's internet censorship, which is a similar problem. Would internet that works even on Mars fix this, too?
+
+---
+
+*Earth Problem 3*
+
+## data growth outpaces network speed
+
+---
+
+background-image: url(img/du-stacks-to-moon.png)
+
+???
+
+From https://www.emc.com/leadership/digital-universe/2014iview/index.htm
+
+---
+
+background-image: url(img/iot-embedded-systems-du.png)
+
+???
+
+From https://www.emc.com/leadership/digital-universe/2014iview/index.htm
+
+---
+
+background-image: url(img/used_intl_bw_for_ars_technica-4f9a9cf-intro.png)
+
+???
+
+From [Ars Technica in 2012](https://arstechnica.com/features/2012/05/bandwidth-explosion-as-internet-use-soars-can-bottlenecks-be-averted/): Bandwidth explosion: As Internet use soars, can bottlenecks be averted?
+Bandwidth usage is soaring, driven by the proliferation of Internet-connected devices.
+
+---
+
+background-image: url(img/nielsen-law-internet-speed-trend-curve.png)
+
+???
+
+From [Nielson](https://www.nngroup.com/articles/law-of-bandwidth/):
+
+> Nielsen's law is similar to the more established Moore's law. Unfortunately, comparing the two laws shows that bandwidth grows slower than computer power. Moore's law says that computers double in capabilities every 18 months, which corresponds to about 60% annual growth.
+
+---
+
+background-image: url(img/neilsons-law-vs-moores-law.png)
+
+???
+
+Again from [Nielsen](https://www.nngroup.com/articles/law-of-bandwidth/):
+
+> As shown in the table, bandwidth will remain the gating factor in the experienced quality of using the internet medium.
+
+## growth in data demand outpaces network speed
+
+Making the internet work on Mars means Martians would be able to get content directly from each other, rather than needing to wait for a round-trip to Earth.
+
+An internet built in this way would also get around bottlenecks in delivering super-fast 4K video, VR experiences, and the increasingly huge IoT data sets created here on Earth.
+
+---
+
+# what do we do
+
+???
+
+So what do we do about it?
+
+It would be super great if we could build one intermediate layer between users and websites which solved this whole problem without existing websites needing to change. Is that possible?
+
+No. That is not possible. The basic architecture of web pages and apps need to change.
+
+What will this new app architecture look like?
+
+Well, there are two parts to this solution. One is here, right now, and you can start using it. These are the technologies that fit under the banner of Offline First.
+
+The second approach--and the bigger change--is the Distributed Web. This is currently emerging, and if you get involved, you can inform the sort of future we fall into.
+
+---
+
+one step at a time
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/12lm.png)
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step1.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step2.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step3.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step4.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step5.png)
+
+---
+
+class: center, middle
+
+# 😞
+
+---
+
+*improvement 1*
+
+# HTTP/2
+
+???
+
+[Much info](https://http2.github.io/faq/#why-revise-http)!
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step1.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step2.png)
+
+???
+
+This feature of HTTP/2 is called Server Push
+
+---
+
+background-image: url(img/roundtrips/http2-step3.png)
+
+---
+
+class: center, middle
+
+# 🎉
+
+---
+
+class: center, middle
+
+# 😕
+
+---
+
+class: center, middle
+
+# ☹️
+
+???
+
+It gets worse!
+
+---
+
+background-image: url(img/roundtrips/http2-step4.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step5.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step6.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step7.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step8.png)
+
+---
+
+background-image: url(img/roundtrips/http2-step9.png)
+
+---
+
+class: center, middle
+
+# 😞
+
+---
+
+*improvement 2*
+
+# Service Workers
+
+---
+
+# What are *Service Workers*?
+
+---
+
+## periodic background syncs &lt;br&gt; *rich offline experiences* &lt;br&gt; push notifications
+
+???
+
+From [Service Workers: An Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
+
+> Rich offline experiences, periodic background syncs, push notifications—functionality that would normally require a native application—are coming to the web. Service workers provide the technical foundation that all these features rely on.
+
+---
+
+background-image: url(img/sw-fetch.png)
+
+???
+
+Service Workers run in the background, intercept calls that the page makes, and can respond with cached content. Image [from Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+
+---
+
+# [Can I use it yet?](https://jakearchibald.github.io/isserviceworkerready/)
+
+---
+
+background-image: url(img/is-service-worker-ready.png)
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/http1-step1.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step2.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step3.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step4.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step5.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step6.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step7.png)
+
+---
+
+class: middle, center
+
+# 😎
+
+---
+
+class: middle, center
+
+# 😟
+
+---
+
+background-image: url(img/roundtrips/sw-step6.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step8.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-size: auto
+background-image: url(img/entire.life-form.png)
+
+---
+
+```
+POST /events
+{
+  title: "Landed on Mars",
+  emoji: ":rocket:",
+  date: "2033-09-16"
+}
+
+```
+
+---
+
+background-size: auto
+background-image: url(img/entire.life-event.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepA.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepB.png)
+
+---
+
+background-image: url(img/roundtrips/sw-stepC.png)
+
+---
+
+class: middle, center
+
+# 😞
+
+---
+
+*improvement 3*
+
+# Local Storage
+
+---
+
+*the idea*
+
+## store data locally
+
+---
+
+*the idea*
+
+## store data locally &lt;br&gt; sync it back to the server periodically
+
+---
+
+two underlying technologies
+
+* ## [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+* ## [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+
+???
+
+Browser-based technologies that store data locally, to be synced back to server (maybe) when connection is available
+
+---
+
+# Can I use it yet?
+
+[yes](http://caniuse.com/#search=localstorage) and [yes](http://caniuse.com/#search=indexeddb)
+
+---
+
+# lots of tools to make it easier
+
+---
+
+background-image: url(img/localForage.jpg)
+
+???
+
+[localForage](https://localforage.github.io/localForage/) makes using localStorage and related tech easier
+
+---
+
+background-image: url(img/PouchDB.png)
+
+???
+
+[PouchDB](https://pouchdb.com/) allows you to read and write data directly on the device, and then sync this data to the cloud when you have an internet connection.
+
+---
+
+background-image: url(img/rxdb.png)
+
+???
+
+[RxDB](https://pubkey.github.io/rxdb/)
+
+---
+
+background-image: url(img/swarm.png)
+
+???
+
+[Swarm](http://swarmjs.github.io/)
+
+---
+
+background-size: auto
+background-image: url(img/synceddb.png)
+
+???
+
+[SyncedDB](https://github.com/paldepind/synceddb)
+
+---
+
+background-size: auto
+background-image: url(img/shareddb.png)
+
+???
+
+[SharedDB](https://github.com/share/sharedb)
+
+---
+
+background-image: url(img/hoodie-js-framework-for-offline-first-apps.png)
+
+???
+
+[Hoodie](http://hood.ie/) is a backend for JS apps that makes offline first simple. From Hoodie's FAQ:
+
+> Hoodie core only provides typical backend APIs, for user authentication and data persistence. It does not interact with the DOM at all. It perfectly works with any MV* framework or template engines.
+
+Hoodie and other orgs doing seminal thinking about new UX conundrums in an Offline First paradigm.
+
+---
+
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step2.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step3.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step4.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step5.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step6.png)
+
+---
+
+class: middle, center
+
+# 😅
+
+---
+
+*Service Workers* + *Local Storage* ≈
+
+# Progressive Web Apps
+
+---
+
+*Service Workers* + *Local Storage* ≈
+
+# Offline First
+
+???
+
+From [Bradley Holt](https://medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694):
+
+> With an Offline First approach you design your app for the most resource-constrained environments first, and then apply progressive enhancement techniques to make your app work better and better as it has access to more and more resources.
+>
+> Using an Offline First approach means that your app will not only work offline, but your app will work better when it has access to only a flaky network connection, and your app will even work better when it has a great network connection. Without this intent to design your app for the progression from offline to limited connectivity to great connectivity, there would be no reason to call it Offline First.
+
+---
+
+class: middle, center
+
+# 😅
+
+---
+
+class: middle, center
+
+# 😓
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/earth-centric.png)
+
+---
+
+background-image: url(img/roundtrips/blank.png)
+
+---
+
+background-image: url(img/roundtrips/sw-step9.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step7.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step8.png)
+
+---
+
+background-image: url(img/roundtrips/ls-step9.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepA.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepB.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepC.png)
+
+---
+
+background-image: url(img/roundtrips/ls-stepD.png)
+
+---
+
+# we need a better architecture
+
+---
+
+background-color: white
+background-image: url(img/client-server-model.svg)
+
+???
+
+Everything we've talked about so far has been constrained by the _client-server model architecture_. Devices can't talk directly to each other, they require the internet to mediate their conversation.
+
+---
+
+background-image: url(img/types-of-networks.jpg)
+
+???
+
+Three types of networks: centralized, decentralized, and distributed. Source: On Distributed Communications Networks, Paul Baran, 1962. More info: https://www.oreilly.com/ideas/understanding-the-blockchain
+
+---
+
+background-image: url(img/types-of-networks-yay-distributed.jpg)
+
+---
+
+*The Distributed Web*
+
+## where two or more devices are gathered, there the Internet is also
+
+---
+
+background-image: url(img/roundtrips/ls-stepD.png)
+
+---
+
+background-image: url(img/roundtrips/dist-1.png)
+
+---
+
+class: middle, center
+
+# how?
+
+---
+
+class: middle, center
+
+# BitTorrent?
+
+---
+
+background-image: url(img/bittorrent-6.gif)
+
+???
+
+From [How Stuff Works](http://computer.howstuffworks.com/bittorrent2.htm)
+
+---
+
+class: middle, center
+
+# git?
+
+---
+
+background-image: url(img/git-data-structure.png)
+background-color: white
+
+???
+
+git uses a completely distributed data model
+
+---
+
+background-image: url(img/git-object-model.png)
+
+???
+
+The git object model: a Merkle DAG (Directed Acyclic Graph)
+
+---
+
+background-size: auto
+background-image: url(img/ralph-merkle.jpg)
+
+???
+
+This data structure was created by [Ralph Merkle](https://en.wikipedia.org/wiki/Ralph_Merkle)
+
+---
+
+background-image: url(img/git-object-model-merkle-tree.png)
+
+---
+
+background-image: url(img/git-object-model-merkle-directed.png)
+
+---
+
+background-image: url(img/git-object-model-merkle-dag.png)
+
+---
+
+class: middle, center
+
+# 1:1
+# file:hash
+
+
+---
+
+class: middle, center
+
+*3fa0d4b98* ↔ *"Hello, World"*
+
+---
+
+So,
+
+# can we use git &amp; BitTorrent together?
+
+---
+
+background-image: url(img/ipfs-is-the-distributed-web.jpg)
+
+???
+
+More info: https://ipfs.io
+
+---
+
+"similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects"
+
+[github.com/ipfs/ipfs](https://github.com/ipfs/ipfs)
+
+---
+
+class: middle, center
+
+# 🎉
+
+---
+
+*improvement 4*
+
+# IPFS
+
+---
+
+"IPFS is a distributed file system that seeks to connect all computing devices with the same system of files."
+
+[github.com/ipfs/ipfs](https://github.com/ipfs/ipfs)
+
+---
+
+"IPFS is becoming a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy."
+
+[github.com/ipfs/ipfs](https://github.com/ipfs/ipfs)
+
+---
+
+# how does it work?
+
+---
+
+# *Content Addressable*
+
+---
+
+class: cramped
+
+h t t p s : / / * t w i t t e r . c o m * / A l s h a h e e e d / s t a t u s / 8 6 0 2 5 7 9 9 8 4 4 6 4 2 8 1 6
+
+???
+
+If all you want is the content of the tweet, you don't really care that it lives on Twitter's servers. Imagine wanting to read a book and needing to go to one specific library, across the country/world, to get it.
+
+---
+
+class: cramped
+
+/ i p f s / * Q m Y w A P J z v 5 C Z s n A 6 2 5 s 3 X f 2 n e m t Y g P p H d W E z 7 9 o j W n P b d G *
+
+???
+
+IPFS, on the other hand, addresses content by a hash unique to that content. You can get it from anyone on the network. You can store it so people near you can quickly retrieve it from your computer.
+
+---
+
+background-image: url(img/roundtrips/dist-1.png)
+
+---
+
+background-image: url(img/roundtrips/dist-2.png)
+
+---
+
+class: middle, center
+
+# 😁
+
+---
+
+class: middle, center
+
+# 😒
+
+---
+
+background-image: url(img/roundtrips/dist-2.png)
+
+---
+
+background-image: url(img/roundtrips/dist-3.png)
+
+---
+
+background-image: url(img/roundtrips/dist-4.png)
+
+---
+
+background-image: url(img/roundtrips/dist-5.png)
+
+---
+
+background-image: url(img/roundtrips/dist-6.png)
+
+---
+
+background-image: url(img/roundtrips/dist-3.png)
+
+---
+
+background-image: url(img/roundtrips/dist-7.png)
+
+---
+
+background-image: url(img/roundtrips/dist-8.png)
+
+---
+
+background-image: url(img/roundtrips/dist-9.png)
+
+---
+
+background-image: url(img/roundtrips/dist-A.png)
+
+---
+
+background-image: url(img/roundtrips/dist-B.png)
+
+---
+
+background-image: url(img/roundtrips/dist-C.png)
+
+---
+
+# Can we do this?
+
+---
+
+# Can we do this?
+
+*Yes*
+
+---
+
+*improvement 5*
+
+# IPFS PubSub
+
+---
+
+background-image: url(img/ipfs-pubsub-crdts.png)
+
+---
+
+# one more puzzle piece
+
+---
+
+## hooray for *distributed files and data*, what about... *server-side logic*?
+
+---
+
+## hooray for *distributed files and data*, what about ~~server-side~~ *incorruptible* logic?
+
+---
+
+background-image: url(img/roundtrips/dist-2.png)
+
+---
+
+background-image: url(img/roundtrips/dist-D.png)
+
+---
+
+background-image: url(img/roundtrips/dist-E.png)
+
+---
+
+background-image: url(img/roundtrips/dist-F.png)
+
+---
+
+background-image: url(img/roundtrips/dist-G.png)
+
+---
+
+background-image: url(img/distributed-consensus.gif)
+
+???
+
+The blockchain allows trustless interactions between peers in a pseudonymous network. Learn more: https://www.youtube.com/watch?v=bBC-nXj3Ng4
+
+---
+
+*we need*
+
+# distributed consensus
+
+---
+
+class: middle, center
+
+# aka
+
+---
+
+class: middle, center
+
+# blockchain
+
+---
+
+class: middle, center
+
+# aka
+
+---
+
+class: middle, center
+
+# bitcoin
+
+---
+
+class: middle, center
+
+# or
+
+---
+
+class: middle, center
+
+# *ethereum*
+
+---
+
+background-image: url(img/ethereum.jpg)
+
+???
+
+ethereum allows creating smart contracts that get run and validated by all machines participating in the blockchain
+
+---
+
+*improvement 6*
+
+# Ethereum
+
+---
+
+# we did it!
+
+---
+
+# we have a fully-functional app!
+
+---
+
+# for any network edge!
+
+---
+
+# we fixed Martian internet!
+
+---
+
+# we fixed latency!
+
+---
+
+# we fixed censorship!
+
+---
+
+# we can put data close to where it's needed!
+
+---
+
+class: middle, center
+
+# 😊
+
+---
+
+class: middle, center
+
+# 😲
+
+---
+
+background-image: url(img/democratic-autonomous-organization.jpg)
+
+???
+
+build a democratic autonomous organization.jpg
+
+---
+
+background-image: url(img/democratic-autonomous-organization-highlights.jpg)
+
+---
+
+*YOU CAN BUILD:*
+
+* A virtual organization where members vote on issues
+* A transparent association based on shareholder voting
+* Your own country with an unchangeable constitution
+* A better delegative democracy
+
+---
+
+class: middle, center
+
+# 😵
+
+---
+
+# *wrapping up*
+
+---
+
+## *where we've been*
+
+1. Problems of future's present &ndash; *solved*
+2. Solutions
+  1. Offline First &ndash; *use it now!*
+  2. Distributed Web &ndash; *help shape its future!*
+
+???
+
+Advice from [@inkel](http://twitter.com/inkel): Don't engage with people that ask a "question" that is in fact a comment or a _I might know better about the subject you're talking about and this is why_. Instead tell them it's a great question and that you can discuss the subject on the hallway track. After all, it's your presentation, not theirs 😉
+
+---
+
+# Resources
+
+---
+
+background-image: url(img/juan-benet-stanford-seminar.jpg)
+
+???
+
+Stanford Seminar - IPFS and the Permanent Web: https://www.youtube.com/watch?v=HUVmypx9HGI
+
+---
+
+* http://offlinefirst.org/
+* https://ipfs.io/
+* https://ethereum.org/
+* https://github.com/chadoh/online-offline-equivalence/
+
+    </textarea>
+    <script src="remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
